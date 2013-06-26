@@ -1,4 +1,9 @@
 WeatherApp::Application.routes.draw do
+
+  root :to => 'maps#index', :via => :get
+
+  resources :maps
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
