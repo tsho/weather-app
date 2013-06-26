@@ -3,5 +3,6 @@ class MapsController < ApplicationController
   end
 
   def show
+    @date = params[:date]
   end
 end

@@ -2,6 +2,10 @@ WeatherApp::Application.routes.draw do
 
   root :to => 'maps#index', :via => :get
 
+
+  get 'maps' => 'maps#index'
+  get ':date' => 'maps#show'
+
   resources :maps
 
   # The priority is based upon order of creation:

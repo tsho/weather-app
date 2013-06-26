@@ -4,4 +4,11 @@
 
 
 $ ->
-  $(".datepicker").datepicker()
+  $(".datepicker").datepicker
+    onSelect: (dateText, inst) -> 
+      month = dateText.substr 0, 2
+      day = dateText.substr 3, 2
+      date = month + day
+      alert date
+      
+      window.location.replace "http://0.0.0.0:3000/" + date
